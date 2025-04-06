@@ -1,0 +1,55 @@
+<div class="card">
+    <div class="card-header">
+        <h2 class="card-title">Управление заявками</h2>
+        <button class="btn btn-primary" id="newRequestBtn">
+            <i class="material-icons">add</i>
+            Новая заявка
+        </button>
+    </div>
+    
+    <div class="filters">
+        <div class="filter-group">
+            <select class="form-control">
+                <option>Все статусы</option>
+                <option>Новые</option>
+                <option>В работе</option>
+                <option>Выполнено</option>
+            </select>
+        </div>
+        
+        <div class="filter-group">
+            <select class="form-control">
+                <option>Все приоритеты</option>
+                <option>Высокий</option>
+                <option>Средний</option>
+                <option>Низкий</option>
+            </select>
+        </div>
+    </div>
+    
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Тип заявки</th>
+                <th>Адрес</th>
+                <th>Дата</th>
+                <th>Статус</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>#12465</td>
+                <td>Протечка воды</td>
+                <td>ул. Ленина, 15, кв. 42</td>
+                <td>15.05.2023</td>
+                <td><span class="status status-in-progress">В работе</span></td>
+                <td class="actions">
+                    <button class="action-btn view"><i class="material-icons">visibility</i></button>
+                    <button class="action-btn edit"><i class="material-icons">edit</i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
