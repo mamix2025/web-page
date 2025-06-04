@@ -8,6 +8,11 @@ function logout() {
     window.location.href = "login.html";
 }
 
+function switch_to_main() {
+    localStorage.setItem("auth_token", token);
+    window.location.href = "main_page.html";
+  }
+
 async function fetchRequests() {
     try {
     const response = await fetch("http://localhost:8000/api/requests", {
