@@ -202,7 +202,7 @@ function initPageEvents(path) {
             document.getElementById('logoutBtn')?.addEventListener('click', () => {
                 if (confirm('Вы уверены, что хотите выйти?')) {
                     alert('Вы вышли из системы');
-                    navigateTo('/');
+                    navigateTo('login_page.html');
                 }
             });
             break;

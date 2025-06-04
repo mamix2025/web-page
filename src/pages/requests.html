@@ -1,55 +1,58 @@
-<div class="card">
-    <div class="card-header">
-        <h2 class="card-title">Управление заявками</h2>
-        <button class="btn btn-primary" id="newRequestBtn">
-            <i class="material-icons">add</i>
-            Новая заявка
-        </button>
-    </div>
-    
-    <div class="filters">
-        <div class="filter-group">
-            <select class="form-control">
-                <option>Все статусы</option>
-                <option>Новые</option>
-                <option>В работе</option>
-                <option>Выполнено</option>
-            </select>
-        </div>
-        
-        <div class="filter-group">
-            <select class="form-control">
-                <option>Все приоритеты</option>
-                <option>Высокий</option>
-                <option>Средний</option>
-                <option>Низкий</option>
-            </select>
-        </div>
-    </div>
-    
-    <table class="data-table">
-        <thead>
-            <tr>
-                <th>№</th>
-                <th>Тип заявки</th>
-                <th>Адрес</th>
-                <th>Дата</th>
-                <th>Статус</th>
-                <th>Действия</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>#12465</td>
-                <td>Протечка воды</td>
-                <td>ул. Ленина, 15, кв. 42</td>
-                <td>15.05.2023</td>
-                <td><span class="status status-in-progress">В работе</span></td>
-                <td class="actions">
-                    <button class="action-btn view"><i class="material-icons">visibility</i></button>
-                    <button class="action-btn edit"><i class="material-icons">edit</i></button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+  <meta charset="UTF-8" />
+  <title>Заявки</title>
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    select {
+      padding: 5px;
+    }
+    button {
+      padding: 5px 10px;
+      margin-top: 5px;
+    }
+    .logout {
+      float: right;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button class="logout" onclick="logout()">Выход</button>
+  <h1>Список заявок</h1>
+  <table id="requests-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Адрес</th>
+        <th>Квартира</th>
+        <th>Тип</th>
+        <th>Статус</th>
+        <th>Дата</th>
+        <th>Жилец</th>
+        <th>Действия</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="../js/requests.js"></script>
+</body>
+</html>
